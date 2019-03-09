@@ -1,0 +1,174 @@
+@font-face {
+    font-family:Coiny-Regular;
+    src: url('./fonts/Coiny/Coiny-Regular.ttf')
+}
+
+.header {
+    display:flex;
+    width:100%;
+    box-sizing:border-box;
+    padding:10px;
+    background-color:#08f;
+
+    .header-wrapper {
+        display:flex;
+        justify-content:space-between;
+    }
+
+    .conteiner-wrapper {
+        margin:0 auto;
+    }
+}
+
+.header__logo {
+    display:flex;
+    align-items: center;
+    .header__logo--image {
+        width:60px;
+        height:auto;
+    }
+    .header__logo--text {
+        padding-left:15px;
+        font-family:Coiny-Regular;
+        color:#000;
+        font-size:2.5rem;
+    }
+}
+
+@media all and (-ms-high-contrast:none) {
+    *::-ms-backdrop, .header__logo--text {
+            padding-left:15px;
+            font-family:Coiny-Regular;
+            color:#000;
+            font-size:2.5rem;
+            height:25px
+        }
+    
+}
+
+
+
+.header__search-wrapper {
+    // width:260px;
+    position:relative;
+    height:40px;
+    margin:left;
+    .header__search-wrapper--search-input {
+        width:260px;
+        height:100%;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        outline: 0;
+        background-color: #F4F4F4;
+        text-shadow: 0 0 0 #000;
+        padding-left:10px;
+    }
+
+    .header__search-wrapper--search-button {
+        width: 25px;
+        position: absolute;
+        right: 10px;
+        top: 8px;
+    }
+}
+
+.header__log {
+    padding-left:15px;
+    font-family: Roboto-Medium;
+    color:#000;
+    font-size:2.5rem;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.header-controls {
+    display:flex;
+    align-items: center;
+}
+
+//remove icon from input search
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+//remove icon from input search
+
+
+
+
+//adaptive-------------------------------------
+
+@media (max-width: 1230px) {
+    .conteiner-wrapper {
+        max-width:90vw;
+        margin:0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+//header
+    .header__logo {
+        .header__logo--image {
+            width:40px;
+        }
+        .header__logo--text {
+            font-size:1.8rem;
+        }
+    }
+    .conteiner-wrapper {
+        .header__search-wrapper {
+            position:relative;
+            height:30px;
+            top:0;
+            .header__search-wrapper--search-input {
+                width:290px;
+            }
+            .header__search-wrapper--search-button {
+                width: 20px;
+                top: 5px;
+            }
+        }
+    }
+//header
+}
+
+@media (max-width: 560px) {
+//header
+    .header-controls {
+        width:80%;
+    }
+    .header__logo {
+        margin-right:25px;
+    }
+    .conteiner-wrapper {
+        .header__search-wrapper {
+            width:100%;
+            position:relative;
+            height:30px;
+            top:0;
+            .header__search-wrapper--search-input {
+                width:100%;
+            }
+            .header__search-wrapper--search-button {
+                width: 20px;
+                top: 5px;
+            }
+        }
+    }
+//header
+}
+
+@media (max-width: 450px) {
+    //header
+    .header__logo {
+        display:none;
+    }
+    .header-controls {
+        width:100%;
+    }
+    //header
+}

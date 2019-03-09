@@ -1,0 +1,172 @@
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url("./fonts/Roboto/Roboto-Bold.ttf");
+}
+@font-face {
+    font-family: Roboto-Light;
+    src: url("./fonts/Roboto/Roboto-Light.ttf");
+}
+
+
+
+
+
+.info-song-controls {
+    position: relative;
+    .info-song-controls__border {
+        height: 1px;
+        background: rgba(124, 124, 124, 0.2);
+        width: 90%;
+        position: absolute;
+        top: 52px;
+        left: 70px;
+    }
+
+    .info-song-controls__button-play {
+        width:100px;
+        .info-song-controls__button-play--img {
+            width:100px;
+            position: relative;
+            z-index: 100;
+        }
+    }
+}
+ 
+.info-song {
+    display:flex;
+    padding:30px 0px 0px 20px;
+
+    .info-song__information {
+        width:35%;
+    }
+
+    .info-song__lyrics {
+        width:65%;
+    }
+}
+
+.info-song__information {
+    .info-song__category {
+        font-family: Roboto-Italic;
+        font-size:1.7rem;
+        padding:10px 0px;
+        font-weight:600;
+        span{
+            font-family: Roboto-Light;
+            font-style:italic;
+            font-size:1.6rem;
+            padding-right:15px;
+            font-weight:300;
+            line-height: 1.6;
+        }
+    }
+}
+
+.info-song__lyrics {
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items: center;
+    font-family: Roboto-Light;
+    font-size:1.5rem;
+    line-height: 1.6;
+
+    .info-song__lyrics--heading {
+        font-family: Roboto-Bold;
+        font-size:2rem;
+        margin-top: 0px;
+    }
+
+    .info-song__lyrics--text {
+        width:60%;
+        .info-song__lyrics--text--format {
+            font-family: Roboto-Light;
+            margin: 0 auto;
+            padding-left: 40px;
+            white-space:pre-wrap;
+        }
+    }
+
+    .info-song__lyrics--text_hidden {
+        display:none;
+    }
+    .info-song__lyrics--button {
+        font-family: Roboto-Bold;
+        background:#08f;
+        padding: 17px 30px;
+        border-radius: 5px;
+        border:none;
+        width:200px;
+        color:#fff;
+        font-size:1.8rem;
+    }
+}
+
+
+
+//adaptive 
+@media (max-width:900px) {
+    .info-song__information {
+        .info-song__category {
+            font-size:1.6rem;
+            span{
+                font-size:1.5rem;
+            }
+        }
+    }
+
+    .info-song__lyrics {
+        .info-song__lyrics--text {
+            width:80%;
+        }
+    }
+}
+
+@media (max-width:800px) {
+    .info-song {
+        display:flex;
+        flex-wrap:wrap;
+        padding:30px 0px 0px 20px;
+    
+        .info-song__information {
+            width:100%;
+        }
+
+        .info-song__lyrics {
+            width:100%;
+            margin-top:30px;
+            align-items: flex-start;
+        }
+    }
+
+    .info-song__lyrics .info-song__lyrics--button {
+        width:160px;
+    }
+
+    .info-song-controls {
+        .info-song-controls__border {
+            top: 30px;
+            left: 40px
+        }
+        .info-song-controls__button-play {
+
+            .info-song-controls__button-play--img {
+                width:60px;
+
+            }
+        }
+    }
+
+    .info-song__lyrics {
+
+        .info-song__lyrics--heading {
+
+        }
+        .info-song__lyrics--text {
+            .info-song__lyrics--text--format {
+                padding-left: 0px;
+            }
+        }
+    }
+}

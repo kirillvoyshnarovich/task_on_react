@@ -1,0 +1,121 @@
+@font-face {
+    font-family: Roboto-Italic;
+    src: url("./fonts/Roboto/Roboto-Italic.ttf");
+}
+
+@font-face {
+    font-family: Roboto-Medium;
+    src: url("./fonts/Roboto/Roboto-Medium.ttf");
+}
+
+.load-data {
+    font-family: Roboto-Medium;
+    font-size:3rem;
+    text-align: center;
+    padding-top:300px;
+}
+
+.main-block {
+    padding-top:30px;
+    padding-bottom:210px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+
+    .main-block__description {
+        font-family: Roboto-Italic;
+        width:70%;
+        font-size:2rem;
+        text-align:center;
+        margin: 0 auto;
+        
+        .main-block__description-salutation {
+            font-size:3rem;
+            margin:0;
+            padding-bottom: 20px;
+        }
+    }
+
+}
+
+.main-block__controls {
+    display:inline-block;
+    margin: 0 auto;
+    padding-top:70px;
+    
+    .main-block__controls--button {
+        height: 50px;
+        width: 200px;
+        margin: 10px;
+        background: none;
+        border: 1px rgba(0,0,0,.08) solid;
+        border-radius: 25px;
+        box-shadow: 0 2px 10px 0 rgba(0,0,0,.4);
+        font-size:1.7rem;
+        color:#000;
+        text-decoration: none;
+        font-family: Roboto-Medium;
+    }
+}
+
+.main-block__controls--button:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+@media all and (-ms-high-contrast:none) {
+*::-ms-backdrop,
+    .main-block__controls {
+        display:inline-block;
+        margin: 0 auto;
+        padding-top:70px;
+        width:40%;
+    }
+}
+
+//adaptive
+
+@media (max-width: 770px) {
+    .main-block {
+        .main-block__description {
+            width:100%;
+        }
+    }
+
+    .main-block {
+        padding-bottom:100px;  
+    }
+}
+
+@media (max-width: 500px) {
+    .main-block {
+        .main-block__description {
+            margin-bottom:20px;
+        }
+    }
+
+    .main-block__controls {
+        display:inline-block;
+        margin: 0 auto;
+        padding-top:70px;
+        display:flex;
+        flex-direction:column;
+        
+        .main-block__controls--button {
+            position: relative;
+            top: -70px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+
+    .main-block {    
+        .main-block__description {
+            font-size:1.6rem;
+        }
+    }
+}
+
+
+
+
